@@ -1,0 +1,256 @@
+/* Basic CSS Challenge styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #000;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.shell {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid #000;
+}
+
+.header-inner,
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.brand {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-nav a {
+  color: #000;
+}
+
+.intro {
+  padding: 60px 0;
+}
+
+.intro h1 {
+  margin: 10px 0;
+  font-size: 48px;
+}
+
+.intro-copy {
+  max-width: 600px;
+}
+
+.intro-rule {
+  border-top: 1px solid #000;
+  margin-top: 30px;
+}
+
+.challenge-section {
+  padding: 50px 0;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  margin: 5px 0 10px;
+  font-size: 32px;
+}
+
+.section-note {
+  max-width: 600px;
+}
+
+/* Task 1: Flexbox */
+.testimonial-row {
+  display: flex;
+  gap: 20px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex: 1;
+  min-height: 240px;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+.quote-mark {
+  font-size: 36px;
+}
+
+.quote {
+  font-size: 18px;
+}
+
+.person {
+  margin-top: auto;
+}
+
+.person span {
+  display: block;
+}
+
+.testimonial-card:hover {
+  background: #f2f2f2;
+}
+
+/* Task 2: CSS Grid */
+.moment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.moment-card {
+  min-height: 180px;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+.moment-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.moment-card h3 {
+  margin-top: 80px;
+}
+
+/* Task 3: Simple animation */
+.motion-demo {
+  position: relative;
+  min-height: 280px;
+  padding: 35px;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.motion-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.motion-copy h3 {
+  font-size: 30px;
+}
+
+.motion-button {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #000;
+  border: 1px solid #000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.motion-button:hover {
+  transform: translateX(10px);
+}
+
+.orbit {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  animation: move-circle 4s linear infinite;
+}
+
+.orbit-one {
+  right: 20%;
+  top: 40px;
+}
+
+.orbit-two {
+  right: 10%;
+  top: 130px;
+  animation-delay: 1s;
+}
+
+@keyframes move-circle {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(40px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.site-footer {
+  border-top: 1px solid #000;
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    display: block;
+    padding: 15px 0;
+  }
+
+  .site-nav {
+    margin-top: 10px;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+  }
+
+  .testimonial-row {
+    flex-direction: column;
+  }
+
+  .moment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .moment-large {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .footer-inner {
+    display: block;
+    padding: 15px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .orbit,
+  .motion-button {
+    animation: none;
+    transition: none;
+  }
+}

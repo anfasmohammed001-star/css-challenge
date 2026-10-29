@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small CSS practice page covering Flexbox, Grid, and animation.">
+  <title>CSS Lab | Layout and Motion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="CSS Lab home">
+        <span class="brand-mark">{ }</span>
+        <span>CSS Lab</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#flexbox">Flexbox</a>
+        <a href="#grid">Grid</a>
+        <a href="#motion">Motion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="intro shell" aria-labelledby="page-title">
+      <p class="eyebrow">WEEK 01 / CSS PRACTICE</p>
+      <h1 id="page-title">Small layouts,<br><em>carefully made.</em></h1>
+      <p class="intro-copy">Three focused exercises for getting comfortable with the parts of CSS that make interfaces feel solid: flexible rows, structured grids, and a little movement.</p>
+      <div class="intro-rule" aria-hidden="true"></div>
+    </section>
+
+    <section class="challenge-section shell" id="flexbox" aria-labelledby="flex-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">01 / FLEXBOX</p>
+          <h2 id="flex-title">A good team makes<br>room for everyone.</h2>
+        </div>
+        <p class="section-note">A flexible row of testimonial cards that becomes a comfortable stack on smaller screens.</p>
+      </div>
+
+      <div class="testimonial-row">
+        <article class="testimonial-card">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <p class="quote">The first version was already useful. The second version finally felt like ours.</p>
+          <div class="person">
+            <div class="avatar avatar-blue" aria-hidden="true">MN</div>
+            <div><strong>Maya Nair</strong><span>Product designer</span></div>
+          </div>
+        </article>
+        <article class="testimonial-card featured-card">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <p class="quote">Clear enough to move quickly, thoughtful enough to keep using every day.</p>
+          <div class="person">
+            <div class="avatar avatar-yellow" aria-hidden="true">JR</div>
+            <div><strong>Jonas Reed</strong><span>Studio founder</span></div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <p class="quote">It gave our little team the confidence to ship something we were proud of.</p>
+          <div class="person">
+            <div class="avatar avatar-coral" aria-hidden="true">SA</div>
+            <div><strong>Samira Ali</strong><span>Community lead</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="challenge-section grid-section" id="grid" aria-labelledby="grid-title">
+      <div class="shell section-heading">
+        <div>
+          <p class="section-number">02 / CSS GRID</p>
+          <h2 id="grid-title">A week in<br>little moments.</h2>
+        </div>
+        <p class="section-note">A six-item editorial grid. The layout changes shape without losing its rhythm.</p>
+      </div>
+
+      <div class="moment-grid shell">
+        <article class="moment-card moment-large moment-sunrise">
+          <span class="moment-label">MONDAY / 07:40</span>
+          <h3>Start before<br>the inbox.</h3>
+          <span class="moment-detail">A quiet hour and a warm cup.</span>
+        </article>
+        <article class="moment-card moment-dark">
+          <span class="moment-label">TUESDAY / 18:10</span>
+          <div class="moon" aria-hidden="true"></div>
+          <h3>Leave some<br>room to think.</h3>
+        </article>
+        <article class="moment-card moment-yellow">
+          <span class="moment-label">WEDNESDAY</span>
+          <div class="spark" aria-hidden="true">✳</div>
+          <h3>Make it<br>memorable.</h3>
+        </article>
+        <article class="moment-card moment-photo">
+          <span class="moment-label">THURSDAY / 12:25</span>
+          <div class="table-shape" aria-hidden="true"></div>
+          <h3>Good work<br>needs a break.</h3>
+        </article>
+        <article class="moment-card moment-coral">
+          <span class="moment-label">FRIDAY / 16:55</span>
+          <h3>Close the<br>open loops.</h3>
+          <span class="moment-detail">Then go outside.</span>
+        </article>
+        <article class="moment-card moment-outline">
+          <span class="moment-label">THE WEEKEND</span>
+          <div class="arrow" aria-hidden="true">↗</div>
+          <h3>Follow<br>the detour.</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="challenge-section motion-section shell" id="motion" aria-labelledby="motion-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">03 / ANIMATION</p>
+          <h2 id="motion-title">A little motion<br>goes a long way.</h2>
+        </div>
+        <p class="section-note">A restrained hover interaction with a clear purpose: making the next action feel inviting.</p>
+      </div>
+
+      <div class="motion-demo">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="motion-copy">
+          <p class="eyebrow">ONE SMALL STEP</p>
+          <h3>Keep moving<br>in the right direction.</h3>
+          <p>Hover over the button. The arrow has somewhere to go.</p>
+          <a class="motion-button" href="#top">Take a look <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>CSS Lab / Week 01</span>
+      <span>Built with HTML &amp; CSS</span>
+    </div>
+  </footer>
+</body>
+</html>
